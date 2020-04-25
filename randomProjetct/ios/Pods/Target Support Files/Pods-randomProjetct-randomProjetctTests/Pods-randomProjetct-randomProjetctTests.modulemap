@@ -1,0 +1,6 @@
+module Pods_randomProjetct_randomProjetctTests {
+  umbrella header "Pods-randomProjetct-randomProjetctTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
