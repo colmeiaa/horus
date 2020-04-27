@@ -8,15 +8,35 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontSize:35
+    fontSize:35,
+    padding:20
   },
 
-  botao: {
+  textInput: {
+    width:200,
+    height:45,
+  },
+
+  botaoLogin: {
+    alignSelf:'stretch',
+    alignItems:'center',
     justifyContent:'center',
     paddingHorizontal:20,
     borderRadius:15,
-    margin:10,
-    height:35,
+    marginTop:40,
+    margin:5,
+    height:40,
+    backgroundColor:'#33adff',
+  },
+
+  botaoCad: {
+    alignSelf:'stretch',
+    alignItems:'center',
+    justifyContent:'center',
+    paddingHorizontal:20,
+    borderRadius:15,
+    margin:5,
+    height:40,
     backgroundColor:'#33adff',
   },
 
