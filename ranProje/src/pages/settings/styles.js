@@ -23,11 +23,6 @@ const styles = StyleSheet.create({
   botaoText: {
     fontSize:20,
     color:'#FFF'
-  },
-
-  avatar:{
-    height:100,
-    width:100,
   }
 
 
