@@ -12,6 +12,6 @@ export default function tabNavi() {
     <Tab.Navigator>
       <Tab.Screen name="Home" component={Home}/>
       <Tab.Screen name="Settings" component={Settings} />
-    </Tab.Navigator>
+    </Tab.Navigator> 
   );
 }
