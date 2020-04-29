@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function login({ navigation }) {
   return (
@@ -18,6 +17,17 @@ export default function login({ navigation }) {
         
           <Text style={styles.botaoText}>
             Login
+          </Text> 
+        
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+        style={styles.botao}
+        onPress={ () => navigation.navigate('tabNav')}
+        >
+        
+          <Text style={styles.botaoText}>
+            Cadastro
           </Text> 
         
         </TouchableOpacity>

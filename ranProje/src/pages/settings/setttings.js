@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function login({ navigation }) {
   return (
@@ -13,7 +12,7 @@ export default function login({ navigation }) {
 
         <TouchableOpacity 
         style={styles.botao}
-        onPress={ () => navigation.navigate('Login')}
+        onPress={ () => navigation.navigate('Login') }
         >
         
           <Text style={styles.botaoText}>

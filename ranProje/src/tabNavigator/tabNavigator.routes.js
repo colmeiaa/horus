@@ -9,8 +9,8 @@ import Settings from '../pages/settings/setttings';
 
 export default function tabNavi() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home}/>
+    <Tab.Navigator >
+      <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator> 
   );
