@@ -1,0 +1,8 @@
+{
+  "name": "Hive",
+  "version": "1.0",
+  "description": "TCC",
+  "main": "index.js",
+  "author": "The Hive Company",
+  "license": "MIT"
+}
