@@ -4,5 +4,8 @@
   "description": "TCC",
   "main": "index.js",
   "author": "The Hive Company",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "expo": "^37.0.8"
+  }
 }
