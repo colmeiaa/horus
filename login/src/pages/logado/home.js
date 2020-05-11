@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
+
 
 
 export default class home extends Component {
@@ -14,7 +15,7 @@ export default class home extends Component {
 
   loadUsers = () => {
 
-      fetch('https://randomuser.me/api/?results=15')
+      fetch('https://randomuser.me/api/?results=20')
         .then( res => res.json() )
         .then( res => {
           this.setState({
@@ -29,15 +30,31 @@ export default class home extends Component {
 
   render() {
     return (
-      <View style={{paddingTop:50, justifyContent:'center',alignItems:'center'}}>
-        <Text style={styles.txt}>
-          Hello aluno
-        </Text>
-
+      <View style={{paddingTop: 40,justifyContent:'center',alignItems:'center'}}>
+             <Text style={styles.txt}>
+                  Eventos
+             </Text>
         <FlatList 
         data={this.state.data}
         renderItem={({ item }) => (
-
+          <TouchableOpacity 
+          onPress={ () => this.props.navigation.navigate('Detail', 
+          {
+            img: item.picture.thumbnail,
+            title: item.name.title, 
+            name: item.name.first, 
+            lastName: item.name.last,
+            email: item.email,
+            location: item.location.street.name,
+            locationNumber: item.location.street.number,
+            city: item.location.city,
+            state: item.location.state,
+            country: item.location.country,
+            username: item.login.username
+          }
+            )}
+          >
+          
           <View style={styles.line}>
             <Image 
               style={styles.avatar}
@@ -49,12 +66,12 @@ export default class home extends Component {
               <Text style={styles.name}> {item.name.first} {item.name.last}</Text>
             </View>
           </View>
-
+        </TouchableOpacity>
         )}
-            keyExtractor={ item => item.email}
+        keyExtractor={ item => item.email}
+        
         />
-
-
+      
       </View>
     )
   }
@@ -80,12 +97,12 @@ const styles = StyleSheet.create({
     width:60,
     height:60,
     borderRadius:50,
-    marginRight:10,
+    marginRight:5,
     alignSelf:'center'
   },
   
   info: {
-    width:300,
+    width: 300,
     flexDirection:'column',
     justifyContent:'center',
   },
@@ -94,7 +111,7 @@ const styles = StyleSheet.create({
     fontSize:12
   },
 
-  eemail: {
+  email: {
     fontSize:14,
     fontWeight: "bold"
   }
